@@ -51,7 +51,7 @@ namespace XamarinWithPostgres
         {
             //ambil dari lokal
             base.OnAppearing();
-            listData.ItemsSource = myDataAccess.GetAll();
+            listData.ItemsSource = myDataAccess.GetAll(); 
         }
 
         private void ListData_Refreshing(object sender, EventArgs e)

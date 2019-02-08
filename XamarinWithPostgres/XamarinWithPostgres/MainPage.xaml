@@ -2,11 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinWithPostgres"
-             x:Class="XamarinWithPostgres.MainPage">
-
+             x:Class="XamarinWithPostgres.MainPage" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
     <StackLayout>
         <!-- Place new controls here -->
         <StackLayout Orientation="Horizontal">
+            <telerikInput:RadButton x:Name="button" 
+                        Text="Click me!"  
+                        BorderThickness="2" Image="ic_add.png"
+                        BorderColor="#4488F6" />
             <Entry x:Name="txtGlobal" WidthRequest="100" />
             <Button x:Name="btnAmbilGlobal" Text="Ambil Nilai" Clicked="BtnAmbilGlobal_Clicked"/>
         </StackLayout>
