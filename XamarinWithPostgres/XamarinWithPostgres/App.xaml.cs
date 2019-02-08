@@ -10,7 +10,8 @@ namespace XamarinWithPostgres
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new SampleListPage());
+            //MainPage = new NavigationPage(new SampleListPage());
+            MainPage = new MyMasterDetailPage();
         }
 
         protected override void OnStart()

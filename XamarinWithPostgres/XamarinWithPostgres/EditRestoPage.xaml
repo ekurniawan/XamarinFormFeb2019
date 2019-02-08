@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinWithPostgres.EditRestoPage" Title="Edit Resto">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Restaurant ID :" />
+            <Entry x:Name="txtRestaurantID" IsEnabled="False" Text="{Binding restaurantid}" />
+            <Label Text="Category ID :" />
+            <Entry x:Name="txtCategoryID" Text="{Binding categoryid}" Keyboard="Numeric" />
+            <Label Text="Nama Restaurant :" />
+            <Entry x:Name="txtNamaRestaurant" Text="{Binding namarestaurant}" Keyboard="Text" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnEdit" Text="Edit" Clicked="BtnEdit_Clicked" />
+                <Button x:Name="btnDelete" Text="Delete" Clicked="BtnDelete_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

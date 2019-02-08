@@ -2,13 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinWithPostgres.DaftarRestaurant" Title="Restaurant">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuTambahResto" Text="Tambah" Icon="ic_add.png" 
+                     Clicked="MenuTambahResto_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            
             <ActivityIndicator x:Name="myIndicator" 
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="CenterAndExpand" />
-            <ListView x:Name="listRestaurant">
+            <ListView x:Name="listRestaurant" IsPullToRefreshEnabled="True" 
+                      Refreshing="ListRestaurant_Refreshing" 
+                      ItemTapped="ListRestaurant_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding restaurantid}" 

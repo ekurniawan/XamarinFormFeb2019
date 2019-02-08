@@ -63,5 +63,49 @@ namespace XamarinWithPostgres.Services
                 throw new Exception($"Ditemukan kesalahan {ex.Message}");
             }
         }
+
+        public async Task<string> UpdateData(Restaurant resto)
+        {
+            var uri = new Uri($"{Constants.RestURL}/api/Restaurant");
+            try
+            {
+                var json = JsonConvert.SerializeObject(resto);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await _client.PutAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    return $"Berhasil mengupdate data dengan id={resto.restaurantid}";
+                }
+                else
+                {
+                    throw new Exception("Gagal request ke server");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ditemukan kesalahan {ex.Message}");
+            }
+        }
+
+        public async Task<string> DeleteData(int id)
+        {
+            var uri = new Uri($"{Constants.RestURL}/api/Restaurant/{id}");
+            try
+            {
+                var response = await _client.DeleteAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    return $"Berhasil mendelete data dengan id {id}";
+                }
+                else
+                {
+                    throw new Exception("Gagal melakukan request");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Kesalahan: {ex.Message}");
+            }
+        }
     }
 }

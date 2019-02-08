@@ -33,5 +33,11 @@ namespace XamarinWithPostgres
             var restaurantPage = new DaftarRestaurant();
             Navigation.PushAsync(restaurantPage);
         }
+
+        private void MenuAdd_Clicked(object sender, EventArgs e)
+        {
+            AddRestaurantPage addRestoPage = new AddRestaurantPage();
+            Navigation.PushAsync(addRestoPage);
+        }
     }
 }
