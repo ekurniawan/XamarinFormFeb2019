@@ -29,6 +29,24 @@ namespace XamarinWithPostgres.DAL
             database.CreateTable<RestaurantSqlite>();
         }
 
+        public IEnumerable<RestaurantSqlite> GetAll()
+        {
+            return database.Query<RestaurantSqlite>("select * from RestaurantSqlite order by namarestaurant");
+        }
 
+        public int InsertData(RestaurantSqlite resto)
+        {
+            return database.Insert(resto);
+        }
+
+        public int DeleteData(RestaurantSqlite resto)
+        {
+            return database.Delete(resto);
+        }
+
+        public int UpdateData(RestaurantSqlite resto)
+        {
+            return database.Update(resto);
+        }
     }
 }
