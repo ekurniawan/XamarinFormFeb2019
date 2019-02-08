@@ -6,11 +6,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             xmlns:pages="clr-namespace:XamarinWithPostgres">
   <!--Pages can be added as references or inline-->
-    <ContentPage Title="Informasi POS" Icon="ic_add.png">
-        <StackLayout>
-            <Label Text="Informasi Program POS" />
-        </StackLayout>
-    </ContentPage>
+    <pages:SampleListPage Title="Sample List" />
+    <pages:MainPage Title="Main Page" />
     <pages:DaftarRestaurant Title="Restaurant" />
-    <ContentPage Title="Tab 3" />
 </TabbedPage>

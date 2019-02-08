@@ -8,9 +8,9 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <ActivityIndicator x:Name="myIndicator" 
+            <!--<ActivityIndicator x:Name="myIndicator" 
                                HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand" />
+                               VerticalOptions="CenterAndExpand" />-->
             <ListView x:Name="listRestaurant" IsPullToRefreshEnabled="True" 
                       Refreshing="ListRestaurant_Refreshing" 
                       ItemTapped="ListRestaurant_ItemTapped">

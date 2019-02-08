@@ -9,6 +9,10 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtGlobal" Placeholder="masukan var global" />
+                <Button x:Name="btnGlobal" Text="Simpan" Clicked="BtnGlobal_Clicked" />
+            </StackLayout>
             <ListView x:Name="lstData" ItemsSource="{Binding ListItems}" 
                       ItemTapped="LstData_ItemTapped" HasUnevenRows="True">
                 <ListView.ItemTemplate>

@@ -39,5 +39,10 @@ namespace XamarinWithPostgres
             AddRestaurantPage addRestoPage = new AddRestaurantPage();
             Navigation.PushAsync(addRestoPage);
         }
+
+        private void BtnGlobal_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.Properties["username"] = txtGlobal.Text;
+        }
     }
 }

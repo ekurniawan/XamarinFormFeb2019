@@ -24,12 +24,12 @@ namespace XamarinWithPostgres
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            myIndicator.IsRunning = true;
+            //myIndicator.IsRunning = true;
 
             listRestaurant.ItemsSource = await restoService.GetAllData();
 
-            myIndicator.IsRunning = false;
-            myIndicator.IsVisible = false;
+            //myIndicator.IsRunning = false;
+            //myIndicator.IsVisible = false;
         }
 
         private async void ListRestaurant_ItemTapped(object sender, ItemTappedEventArgs e)
