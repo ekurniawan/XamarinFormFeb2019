@@ -6,6 +6,7 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="btnIsiData" Text="Isi Data" Clicked="BtnIsiData_Clicked" />
+                <Button x:Name="btnDeleteAll" Text="Delete All Lokal" Clicked="BtnDeleteAll_Clicked" />
             </StackLayout>
             <ListView x:Name="listData" IsPullToRefreshEnabled="True" Refreshing="ListData_Refreshing">
                 <ListView.ItemTemplate>

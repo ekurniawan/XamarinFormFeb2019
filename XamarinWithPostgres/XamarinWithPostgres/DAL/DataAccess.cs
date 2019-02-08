@@ -48,5 +48,10 @@ namespace XamarinWithPostgres.DAL
         {
             return database.Update(resto);
         }
+
+        public int DeleteAll()
+        {
+            return database.Execute("delete from RestaurantSqlite");
+        }
     }
 }

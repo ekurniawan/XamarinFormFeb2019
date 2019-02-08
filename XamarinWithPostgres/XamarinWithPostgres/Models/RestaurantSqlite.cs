@@ -7,7 +7,7 @@ namespace XamarinWithPostgres.Models
 {
     public class RestaurantSqlite
     {
-        [PrimaryKey,AutoIncrement]
+        [PrimaryKey]
         public int restaurantid { get; set; }
         public string namarestaurant { get; set; }
         [NotNull]

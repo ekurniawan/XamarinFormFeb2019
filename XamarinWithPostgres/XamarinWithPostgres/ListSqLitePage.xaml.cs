@@ -59,5 +59,18 @@ namespace XamarinWithPostgres
             OnAppearing();
             listData.IsRefreshing = false;
         }
+
+        private async void BtnDeleteAll_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                myDataAccess.DeleteAll();
+                await DisplayAlert("Keterangan", "Semua data berhasil didelete", "OK");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Error: {ex.Message}", "OK");
+            }
+        }
     }
 }
