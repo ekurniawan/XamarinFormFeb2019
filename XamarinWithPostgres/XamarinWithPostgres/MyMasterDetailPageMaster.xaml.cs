@@ -37,7 +37,7 @@ namespace XamarinWithPostgres
                     new MyMasterDetailPageMenuItem { Id = 1, Title = "Contoh Tabbed",TargetType=typeof(MyTabbedPage) },
                     new MyMasterDetailPageMenuItem { Id = 2, Title = "Tambah Restaurant",TargetType=typeof(AddRestaurantPage) },
                     new MyMasterDetailPageMenuItem { Id = 3, Title = "Tambah Kategori" },
-                    new MyMasterDetailPageMenuItem { Id = 4, Title = "Exit" },
+                    new MyMasterDetailPageMenuItem { Id = 4, Title = "Sample SQLite",TargetType=typeof(ListSqLitePage) },
                 });
             }
             

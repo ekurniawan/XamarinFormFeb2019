@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinWithPostgres.ListSqLitePage" Title="List Sqlite">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnIsiData" Text="Isi Data" Clicked="BtnIsiData_Clicked" />
+            </StackLayout>
+            <ListView x:Name="listData" IsPullToRefreshEnabled="True" Refreshing="ListData_Refreshing">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding restaurantid}" Detail="{Binding namarestaurant}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
